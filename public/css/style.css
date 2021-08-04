@@ -1,0 +1,11 @@
+.logoBucket{
+    filter: invert(100%) sepia(96%) saturate(17%) hue-rotate(236deg) brightness(105%) contrast(100%);
+}
+
+.container{
+    font-family: 'Roboto', sans-serif;
+}
+.bienvenue{
+
+   text-align: center;
+}

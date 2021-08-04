@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block titre %}Home - {{ parent() }}{% endblock %}
+
+{% block body %}
+<h1>Home</h1>
+<br><br><br><br><br><br>
+
+<a href="{{ path('wish_ajouter')}}" class="btn btn-success">Ajouter</a>
+
+
+
+{# Comment envoyer l'id avec le path ?#}
+{% set myId = 9  %}
+<a href="{{ path('wish_supprimer', { 'id': myId } )}}" class="btn btn-danger">Supprimer</a>
+{% endblock %}
+
