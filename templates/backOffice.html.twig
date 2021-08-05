@@ -26,17 +26,6 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 {% set chemin = app.request.attributes.get('_route') %}
                 
-                <li class="nav-item">
-                <a class="nav-link {% if  chemin =='contact' %} active {% endif %}" 
-                href="{{ path('contact')}}">Contact |</a></li>
-
-                <li class="nav-item">
-                <a class="nav-link {% if  chemin =='about_us' %} active {% endif %}" 
-                href="{{ path('about_us')}}">About us |</a></li>
-
-                <li class="nav-item">
-                <a class="nav-link {% if  chemin =='back_home' %} active {% endif %}" 
-                href="{{ path('back_home')}}">Admin</a></li>
                 
             </ul>
         </div>

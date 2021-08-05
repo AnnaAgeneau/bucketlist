@@ -1,28 +1,31 @@
-{% extends 'base.html.twig' %}
+{% extends 'backOffice.html.twig' %}
 
 {% block titre %}Home - {{ parent() }}{% endblock %}
 
 {% block body %}
-<h1>Bienvenue</h1>
+<h1>Back-Office</h1>
 <br><br><br><br><br><br>
 
 <div class="row">
         <div class="offset-3 col-6">
         <table class="table table-striped">
             <tbody>
-            {% for w in wish %}
+            {% for w in wishes %}
                 <tr>
                     <td>{{w.id}}</td>
                     <td>{{w.title}}</td>
                     <td>{{w.description}}</td>
                     <td>{{w.author}}</td>
                     <td>{{w.isPublished}}</td>
-                    <td>{{w.dateCreated | date('d-m-Y')}}</td>                    
+                    <td>{{w.dateCreated | date('d-m-Y')}}</td>
+                    <td>
+                        <a href="{{ path('wish_supprimer', {id:w.id})}}">supprimer</a>
+                    </td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
-        <a href="{{ path('wish_ajouter')}}" class="btn btn-success">Ajouter un Souhait</a>
+        <a href="{{ path('wish_ajouter')}}" class="btn btn-success">Ajouter</a>
         </div>
     </div>
 
